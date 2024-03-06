@@ -1,22 +1,21 @@
 import { useState } from 'react'
 import './Confirmation.css'
 import cnIMG from './assets/connection.jpg'
+import React from 'react';
 
 function Confirmation() {
-
   const[user, setName] = useState("")
-  const[dateConfirmation, setPassword] = useState("")
+
 
   return(
     <div className='container'>
-      <div className='container-login'>
-        <div className='wrap-login'>
-          <form className='login-form'>
-            <span className='login-form-title'>Confirme sua presença!</span>
-            <span className='login-form-title'>
+      <div className='container-confirmation'>
+        <div className='wrap-confirmation'>
+          <form className='confirmation-form'>
+          <span className='confirmation-form-title'>
               <img src={cnIMG} alt="Connection Camboriú" />
             </span>
-
+            <span className='confirmation-form-title'>Confirme sua presença!</span>
             <div className='wrap-input'>
               <input 
                 className={user !== "" ? 'has-val input' : 'input'} 
@@ -28,27 +27,16 @@ function Confirmation() {
             </div>    
             <div className='check-input'>
               <div className='select-checkbox'>
-                <input 
-                    className={dateConfirmation !== "" ? 'has-val input' : 'input'}
-                    type="checkbox" 
-                    value={dateConfirmation}
-                    onChange={e => setPassword(e.target.value)}
-                />
-                <p>Sim confirmo!</p>
+              <input value = "yes" type = "checkbox"/>
+                <p>Sim, não posso perder!</p>
               </div>
               <div className='select-checkbox'>
-                <input 
-                    className={dateConfirmation !== "" ? 'has-val input' : 'input'}
-                    type="checkbox" 
-                    value={dateConfirmation}
-                    onChange={e => setPassword(e.target.value)}
-                />
-                <p>Não posso ir...</p>
-              </div>            
-            </div>     
-
-            <div className='container-login-form-btn'>
-              <button className='login-form-btn'>Login</button>
+              <input value = "not" type = "checkbox"/>
+                <p>Não vou, infelizmente...😭</p>
+              </div> 
+            </div> 
+            <div className='container-confirmation-form-btn'>
+              <button className='confirmation-form-btn'>Confirmar</button>
             </div>   
 
             <div className='text-center'>
