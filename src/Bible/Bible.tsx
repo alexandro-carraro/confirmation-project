@@ -13,13 +13,12 @@ const generateVerse = () => {
 };
 
 return (
-  <div>
-    <h1>Bible Verse Generator</h1>
-    <button onClick={generateVerse}>Generate Verse</button>
-    <p>{verse}</p>
-  </div>
-);
-};
+    <div>
+      <span className='generate-verse' onClick={generateVerse}>Clique aqui e gere um versículo da Bíblia</span>
+      <p className='bible-verse'>{verse}</p>
+    </div>
+  );
+  };
 
 
 export default BibleVerse;

@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import './Confirmation.css'
-import cnIMG from './assets/connection.jpg'
-import React from 'react';
+import cnIMG from '../assets/connection.jpg'
+import Bible from '../Bible/Bible'
+
 
 function Confirmation() {
   const[user, setName] = useState("")
 
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleCheckboxChange = (option: any) => {
+      setSelectedOption(option);
+  };
 
   return(
     <div className='container'>
@@ -27,22 +33,31 @@ function Confirmation() {
             </div>    
             <div className='check-input'>
               <div className='select-checkbox'>
-              <input value = "yes" type = "checkbox"/>
-                <p>Sim, não posso perder!</p>
+              <input
+                  type="checkbox"
+                  checked={selectedOption === 'yes'}
+                  onChange={() => handleCheckboxChange('yes')}
+              />
+                <p>Vou sim, não posso perder!</p>
               </div>
               <div className='select-checkbox'>
-              <input value = "not" type = "checkbox"/>
+              <input
+                  type="checkbox"
+                  checked={selectedOption === 'not'}
+                  onChange={() => handleCheckboxChange('not')}
+              />
                 <p>Não vou, infelizmente...😭</p>
               </div> 
+              <p>Selected Option: {selectedOption}</p>
             </div> 
             <div className='container-confirmation-form-btn'>
               <button className='confirmation-form-btn'>Confirmar</button>
             </div>   
-
-            <div className='text-center'>
-              biblia generator
+            <div className='bible-container'>
+              <div className='bible-generator'>
+                <Bible/>
+              </div>
             </div>
-
           </form>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Login.css'
-import cnIMG from './assets/connection.jpg'
+import cnIMG from '../assets/connection.jpg'
+import Bible from '../Bible/Bible'
 
 function Login() {
 
@@ -44,7 +45,11 @@ function Login() {
               <span className='txt1'>Não possui conta?</span>
               <a className='txt2' href="">Criar conta!</a>
             </div>
-
+            <div className='bible-container'>
+              <div className='bible-generator'>
+                <Bible/>
+              </div>
+            </div>
           </form>
         </div>
       </div>
