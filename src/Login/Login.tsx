@@ -13,11 +13,11 @@ function Login() {
       <div className='container-login'>
         <div className='wrap-login'>
           <form className='login-form'>
-            <span className='login-form-title'>Bem vindo!</span>
             <span className='login-form-title'>
               <img src={cnIMG} alt="Connection Camboriú" />
             </span>
-
+            <span className='login-form-title'>Bem vindo!</span>
+            
             <div className='wrap-input'>
               <input 
                 className={email !== "" ? 'has-val input' : 'input'} 
