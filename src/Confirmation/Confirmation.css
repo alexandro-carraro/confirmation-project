@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
 :root{
-    --gradient-linear: linear-gradient(120deg, #0045a0, #21d4fd, #0045a0);
-    --gradient-btn: linear-gradient(120deg, #0045a0, #21d4fd, #0045a0 );
-    --gradient-radial: radial-gradient(circle at top left, #0045a0, #21d4fd, #0045a0);
-    --font-color: #858282;
+  --bkg-img: url(../assets/background.connection.jpg);
+  --gradient-linear: linear-gradient(120deg, #0045a0, #21d4fd, #0045a0);
+  --gradient-btn: linear-gradient(120deg, #0045a0, #21d4fd, #0045a0 );
+  --gradient-radial: radial-gradient(circle at top left, #0045a0, #21d4fd, #0045a0);
+  --font-color: #858282;
 }
 
 * {
@@ -29,12 +30,14 @@ body, html {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background: var(--gradient-linear);
+  background-image: var(--bkg-img);
+  background-position: center;
+  background-size: cover;
 }
 
 .wrap-confirmation {
   width: 390px;
-  background-color: rgb(253, 253, 253);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;

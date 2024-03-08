@@ -12,13 +12,13 @@ function Register() {
 
   return(
     <div className='container'>
-      <div className='container-login'>
-        <div className='wrap-login'>
-          <form className='login-form'>
-            <span className='login-form-title'>
+      <div className='container-register'>
+        <div className='wrap-register'>
+          <form className='register-form'>
+            <span className='register-form-title'>
               <img src={cnIMG} alt="Connection Camboriú" />
             </span>
-            <span className='login-form-title'>Cadastre-se</span>
+            <span className='register-form-title'>Cadastre-se</span>
 
             <div className='wrap-input'>
               <input 
@@ -76,7 +76,7 @@ function Register() {
               <p>{password}</p>
             </div> 
 
-            <div className='container-login-form-btn'>
+            <div className='container-register-form-btn'>
               <button className='login-form-btn'>Confirma</button>
             </div>   
           </form>
