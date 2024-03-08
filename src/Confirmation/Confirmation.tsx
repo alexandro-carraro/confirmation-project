@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Confirmation.css'
 import cnIMG from '../assets/connection.jpg'
 import Bible from '../Bible/Bible'
+import { Link } from 'react-router-dom'
 
 
 function Confirmation() {
@@ -17,12 +18,15 @@ function Confirmation() {
     <div className='container'>
       <div className='container-confirmation'>
         <div className='wrap-confirmation'>
+          <div className='return-confirmation'>
+            <button className='return-confirmation-btn'><Link to="/" className='return-link-confirmation'>&#706;</Link></button>
+          </div>
           <form className='confirmation-form'>
           <span className='confirmation-form-title'>
               <img src={cnIMG} alt="Connection Camboriú" />
             </span>
             <span className='confirmation-form-title'>Confirme sua presença!</span>
-            <div className='wrap-input'>
+            <div className='wrap-input-confirmation'>
               <input 
                 className={user !== "" ? 'has-val input' : 'input'} 
                 type="text" 

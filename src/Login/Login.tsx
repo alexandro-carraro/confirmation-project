@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Login.css'
 import cnIMG from '../assets/connection.jpg'
 import Bible from '../Bible/Bible'
+import { Link } from 'react-router-dom'
 
 function Login() {
 
@@ -18,7 +19,7 @@ function Login() {
             </span>
             <span className='login-form-title'>Bem vindo!</span>
 
-            <div className='wrap-input'>
+            <div className='wrap-input-login'>
               <input 
                 className={email !== "" ? 'has-val input' : 'input'} 
                 type="email" 
@@ -27,7 +28,7 @@ function Login() {
               />
               <span className='focus-input' data-placeholder="Email"></span>  
             </div>    
-            <div className='wrap-input'>
+            <div className='wrap-input-login'>
               <input 
                 className={password !== "" ? 'has-val input' : 'input'}
                 type="password" 
@@ -43,7 +44,7 @@ function Login() {
 
             <div className='text-center'>
               <span className='txt1'>Não possui conta?</span>
-              <a className='txt2' href="">Criar conta!</a>
+              <a className='txt2' href="/Register/Register"><Link to="/Register/Register">Criar Conta!</Link></a>
             </div>
             <div className='bible-container'>
               <div className='bible-generator'>

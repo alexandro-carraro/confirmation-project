@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Register.css'
 import cnIMG from '../assets/connection.jpg'
+import { Link } from 'react-router-dom'
 
 function Register() {
 
@@ -14,13 +15,16 @@ function Register() {
     <div className='container'>
       <div className='container-register'>
         <div className='wrap-register'>
+          <div className='return-register'>
+          <button className='return-register-btn'><Link to="/" className='return-link-register'>&#706;</Link></button>
+          </div>
           <form className='register-form'>
             <span className='register-form-title'>
               <img src={cnIMG} alt="Connection Camboriú" />
             </span>
             <span className='register-form-title'>Cadastre-se</span>
 
-            <div className='wrap-input'>
+            <div className='wrap-input-register'>
               <input 
                 className={name !== "" ? 'has-val input' : 'input'}
                 type="text" 
@@ -31,7 +35,7 @@ function Register() {
               <p>{name}</p>  
             </div>  
 
-            <div className='wrap-input'>
+            <div className='wrap-input-register'>
               <input 
                 className={address !== "" ? 'has-val input' : 'input'}
                 type="text" 
@@ -41,7 +45,7 @@ function Register() {
               <span className='focus-input' data-placeholder="Endereço"></span> 
             </div>
 
-            <div className='wrap-input'>
+            <div className='wrap-input-register'>
               <input 
                 className={phone !== "" ? 'has-val input' : 'input'}
                 type="tel" 
@@ -54,7 +58,7 @@ function Register() {
               <p>{phone}</p> 
             </div>
 
-            <div className='wrap-input'>
+            <div className='wrap-input-register'>
               <input 
                 className={email !== "" ? 'has-val input' : 'input'} 
                 type="email" 
@@ -65,7 +69,7 @@ function Register() {
               <p>{email}</p> 
             </div>   
 
-            <div className='wrap-input'>
+            <div className='wrap-input-register'>
               <input 
                 className={password !== "" ? 'has-val input' : 'input'}
                 type="password" 

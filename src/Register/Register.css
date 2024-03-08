@@ -44,6 +44,29 @@ body, html {
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+.return-register{
+  display: block;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  margin-top: -55px;
+  margin-left: -35px;
+}
+.return-register-btn{
+  color: var(--font-color);
+  font-size: 33px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 13px;
+  border-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+}
+
+.return-link-register{
+  text-decoration: none;
+  color: var(--font-color);
+}
+
 .register-form {
   width: 100%;
 }
@@ -73,7 +96,7 @@ body, html {
     background-position: right;
 }
 
-.wrap-input {
+.wrap-input-register {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #adadad;
