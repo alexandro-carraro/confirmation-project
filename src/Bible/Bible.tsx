@@ -14,7 +14,7 @@ const generateVerse = () => {
 
 return (
     <div>
-      <span className='generate-verse' onClick={generateVerse}>Clique aqui e gere um versículo da Bíblia</span>
+      <span className='generate-verse' onClick={generateVerse}>Clique aqui e tenha um momento com Deus</span>
       <p className='bible-verse'>{verse}</p>
     </div>
   );

@@ -10,8 +10,9 @@ function Confirmation() {
 
   const [selectedOption, setSelectedOption] = useState(null);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleCheckboxChange = (option: any) => {
-      setSelectedOption(option);
+      setSelectedOption(option);C
   };
 
   return(
